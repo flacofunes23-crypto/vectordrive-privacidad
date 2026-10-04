@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>Política de privacidad de VectorDrive Mendoza</h1>
-<p>Última actualización: 20 de septiembre de 2026.</p>
+<p>Última actualización: 4 de octubre de 2026.</p>
 
 <p>VectorDrive Mendoza (“la app”) es una aplicación para choferes de aplicaciones de viaje en Mendoza, Argentina. Te ayuda a calcular cuánto rinde cada oferta de viaje, muestra un mapa de zonas de riesgo armado por los propios choferes y te deja marcar zonas que preferís evitar. Esta página explica qué datos usamos, para qué y con quién los compartimos.</p>
 <p class="nota">VectorDrive Mendoza es una app independiente. No está afiliada, patrocinada ni respaldada por Cabify ni por ninguna otra empresa de transporte.</p>
@@ -25,7 +25,7 @@
 <ul>
   <li><strong>Cuenta:</strong> correo electrónico y nombre que cargás al registrarte. El correo lo usamos solo para crear tu cuenta y ayudarte a recuperarla si la perdés. No te pedimos número de teléfono. Si entrás con Google, recibimos tu correo y nombre desde tu cuenta de Google. La contraseña la guarda de forma cifrada el servicio de autenticación; nosotros no la vemos.</li>
   <li><strong>Lectura de ofertas (Servicio de Accesibilidad):</strong> mientras Cabify Driver está abierto, la app lee el texto de la oferta que aparece en pantalla: tarifa, distancia, tiempo estimado y calles de retiro y destino. La tarifa, la distancia y el tiempo se procesan solo en tu teléfono. La app no saca fotos, no graba la pantalla, no lee el contenido de otras aplicaciones y no toca, acepta ni rechaza nada por vos.</li>
-  <li><strong>Calle de destino de la oferta:</strong> solo si tenés zonas a evitar o el riesgo de zona activado, la calle de destino se envía a OpenStreetMap (Nominatim) y a nuestros servidores para ubicarla y compararla con tus zonas. Si no se puede ubicar, el texto de la dirección queda guardado en una lista compartida con otros choferes de la app para que la ubiquen a mano; en esa lista no se muestra quién recibió la oferta.</li>
+  <li><strong>Calle de destino de la oferta:</strong> solo si tenés zonas a evitar o los avisos de reportes de otros choferes encendidos, la calle de destino se envía a nuestros servidores y, a través de ellos, a LocationIQ para ubicarla y compararla con tus zonas. Las direcciones ubicadas quedan guardadas en nuestros servidores, sin indicar quién recibió la oferta, para no tener que volver a buscarlas. Si no se puede ubicar, el texto de la dirección queda guardado en una lista compartida con otros choferes de la app para que la ubiquen a mano; en esa lista no se muestra quién recibió la oferta.</li>
   <li><strong>Ubicación:</strong> la ubicación del teléfono (GPS) se usa únicamente cuando vos elegís reportar un incidente, para ubicarlo en el mapa. Se guarda junto con el reporte. La app no pide ubicación en segundo plano.</li>
   <li><strong>Reportes y sugerencias:</strong> el texto que escribís, la ubicación del reporte y la fecha. El tipo y la gravedad del incidente los clasifica un modelo de inteligencia artificial.</li>
   <li><strong>Preferencias:</strong> tus umbrales de rentabilidad, las zonas y departamentos que evitás y tu preferencia sobre el riesgo de zona.</li>
@@ -45,7 +45,7 @@
 <h2>4. Con quién los compartimos</h2>
 <ul>
   <li><strong>Supabase</strong>: aloja la base de datos y la autenticación de la app.</li>
-  <li><strong>OpenStreetMap / Nominatim</strong>: recibe la calle de destino de una oferta o coordenadas para ubicarlas en el mapa, y las descargas de mapa. Como cualquier servicio en internet, también recibe tu dirección IP.</li>
+  <li><strong>LocationIQ</strong>: recibe, a través de nuestros servidores, la calle de destino de una oferta, las búsquedas de barrios o direcciones que hacés en la app, o coordenadas para ubicarlas en el mapa; en esos casos no recibe tu nombre, tu mail ni tu dirección IP. También entrega las imágenes del mapa que ves en la app: para eso tu teléfono se conecta directo y, como cualquier servicio en internet, recibe tu dirección IP. Los datos del mapa son de OpenStreetMap.</li>
   <li><strong>OpenRouter y DeepSeek</strong>: reciben el texto de tus reportes de incidentes (sin tu nombre ni tu ubicación) para clasificarlos.</li>
   <li><strong>Google</strong>: para iniciar sesión con Google y para procesar la suscripción en Google Play.</li>
   <li><strong>Otros choferes</strong>: ven el mapa de riesgo (zonas con un nivel de riesgo, sin indicar quién reportó) y la lista de direcciones sin ubicar (solo el texto de la dirección).</li>
