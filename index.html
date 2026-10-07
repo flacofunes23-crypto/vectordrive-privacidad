@@ -25,9 +25,9 @@
 <ul>
   <li><strong>Cuenta:</strong> correo electrónico y nombre que cargás al registrarte. El correo lo usamos solo para crear tu cuenta y ayudarte a recuperarla si la perdés. No te pedimos número de teléfono. Si entrás con Google, recibimos tu correo y nombre desde tu cuenta de Google. La contraseña la guarda de forma cifrada el servicio de autenticación; nosotros no la vemos.</li>
   <li><strong>Lectura de ofertas (Servicio de Accesibilidad):</strong> mientras Cabify Driver está abierto, la app lee el texto de la oferta que aparece en pantalla: tarifa, distancia, tiempo estimado y calles de retiro y destino. La tarifa, la distancia y el tiempo se procesan solo en tu teléfono. La app no saca fotos, no graba la pantalla, no lee el contenido de otras aplicaciones y no toca, acepta ni rechaza nada por vos.</li>
-  <li><strong>Calles de retiro y de destino de la oferta:</strong> solo si tenés zonas a evitar o los avisos de zonas peligrosas encendidos, y según las casillas que elijas en Perfil, esas calles se envían a nuestros servidores y, a través de ellos, a LocationIQ para ubicarlas y compararlas con tus zonas. Las direcciones ubicadas quedan guardadas en nuestros servidores, sin indicar quién recibió la oferta, para no tener que volver a buscarlas. Para que el aviso salga más rápido, una copia de las direcciones ya ubicadas (solo el texto de la dirección y su punto en el mapa, sin datos de quién las buscó ni cuándo) se guarda en los teléfonos de los choferes que usan la app. Si no se puede ubicar, el texto de la dirección queda guardado en una lista compartida con otros choferes de la app para que la ubiquen a mano; en esa lista no se muestra quién recibió la oferta.</li>
-  <li><strong>Ubicación:</strong> la ubicación del teléfono (GPS) se usa únicamente cuando vos elegís reportar un incidente, para ubicarlo en el mapa. Se guarda junto con el reporte. La app no pide ubicación en segundo plano.</li>
-  <li><strong>Reportes y sugerencias:</strong> el texto que escribís, la ubicación del reporte y la fecha. El tipo y la gravedad del incidente los clasifica un modelo de inteligencia artificial.</li>
+  <li><strong>Calles de retiro y de destino de la oferta:</strong> solo si tenés zonas a evitar o los avisos de zonas peligrosas encendidos, y según las casillas que elijas en Perfil, esas calles se envían a nuestros servidores y, a través de ellos, a LocationIQ para ubicarlas y compararlas con tus zonas. Las direcciones ubicadas quedan guardadas en nuestros servidores, sin indicar quién recibió la oferta, para no tener que volver a buscarlas. Para que el aviso salga más rápido, una copia de las direcciones ya ubicadas (solo el texto de la dirección y su punto en el mapa, sin datos de quién las buscó ni cuándo) se guarda en los teléfonos de los choferes que usan la app. Si no se puede ubicar, el texto de la dirección queda guardado para que el equipo de VectorDrive la ubique a mano; no se guarda quién recibió la oferta.</li>
+  <li><strong>Ubicación:</strong> la ubicación del teléfono (GPS) se usa solo para mostrarte en el mapa dónde estás, cuando abrís el Mapa o tocás "Mi ubicación". No se guarda ni se envía a nuestros servidores. La app no pide ubicación en segundo plano.</li>
+  <li><strong>Sugerencias:</strong> el texto que escribís y la fecha. Los reportes de incidentes que se enviaron con versiones anteriores de la app quedan guardados con su texto, ubicación y fecha.</li>
   <li><strong>Preferencias:</strong> tus umbrales de rentabilidad, las zonas y departamentos que evitás y tu preferencia sobre el riesgo de zona.</li>
   <li><strong>Datos técnicos:</strong> si la lectura de una oferta falla, se registra qué campos no se pudieron leer (sin el contenido de la oferta) junto con tu identificador de cuenta, para poder corregir la app.</li>
   <li><strong>Suscripción:</strong> el cobro lo gestiona Google Play. No recibimos ni guardamos datos de tu tarjeta ni de tu medio de pago.</li>
@@ -36,8 +36,7 @@
 <h2>3. Para qué usamos los datos</h2>
 <ul>
   <li>Calcular y mostrar el semáforo de rentabilidad de cada oferta.</li>
-  <li>Comparar el punto de retiro y el destino de una oferta con tus zonas a evitar, con el riesgo de zona reportado por otros choferes y con las zonas peligrosas marcadas por choferes de Mendoza en un mapa público.</li>
-  <li>Armar el mapa de riesgo comunitario a partir de los reportes.</li>
+  <li>Comparar el punto de retiro y el destino de una oferta con tus zonas a evitar, y con las zonas de riesgo marcadas por choferes de Mendoza en un mapa público.</li>
   <li>Administrar tu cuenta y tu suscripción, y mejorar y corregir la app.</li>
 </ul>
 <p>No usamos tus datos para publicidad y no los vendemos.</p>
@@ -46,13 +45,12 @@
 <ul>
   <li><strong>Supabase</strong>: aloja la base de datos y la autenticación de la app.</li>
   <li><strong>LocationIQ</strong>: recibe, a través de nuestros servidores, las calles de retiro y de destino de una oferta, las búsquedas de barrios o direcciones que hacés en la app, o coordenadas para ubicarlas en el mapa; en esos casos no recibe tu nombre, tu mail ni tu dirección IP. También entrega las imágenes del mapa que ves en la app: para eso tu teléfono se conecta directo y, como cualquier servicio en internet, recibe tu dirección IP. Los datos del mapa son de OpenStreetMap.</li>
-  <li><strong>OpenRouter y DeepSeek</strong>: reciben el texto de tus reportes de incidentes (sin tu nombre ni tu ubicación) para clasificarlos.</li>
   <li><strong>Google</strong>: para iniciar sesión con Google y para procesar la suscripción en Google Play.</li>
-  <li><strong>Otros choferes</strong>: ven el mapa de riesgo (zonas con un nivel de riesgo, sin indicar quién reportó) y la lista de direcciones sin ubicar (solo el texto de la dirección).</li>
+  <li><strong>Otros choferes</strong>: reciben en su teléfono la copia de las direcciones ya ubicadas (solo el texto de la dirección y su punto en el mapa, sin indicar quién recibió la oferta).</li>
 </ul>
 
 <h2>5. Cuánto tiempo guardamos los datos y cómo borrarlos</h2>
-<p>Guardamos tus datos mientras tengas la cuenta. Podés borrarla en cualquier momento desde la app: <strong>Perfil → Borrar cuenta</strong>. Al hacerlo se eliminan tu cuenta, tu perfil, tus reportes, tus sugerencias y tus preferencias. El mapa de riesgo comunitario ya calculado y las direcciones que hayas ayudado a ubicar quedan sin vínculo con tu cuenta.</p>
+<p>Guardamos tus datos mientras tengas la cuenta. Podés borrarla en cualquier momento desde la app: <strong>Perfil → Borrar cuenta</strong>. Al hacerlo se eliminan tu cuenta, tu perfil, tus reportes, tus sugerencias y tus preferencias. Las direcciones ya ubicadas no tienen vínculo con ninguna cuenta.</p>
 <p>Si no podés entrar a la app, escribí a <a href="mailto:sidium.26@gmail.com">sidium.26@gmail.com</a> desde el correo de tu cuenta pidiendo el borrado y lo hacemos.</p>
 <p>Los pasos detallados y qué datos se eliminan o se conservan están en <a href="eliminar-cuenta.html">esta página</a>.</p>
 <p>Cancelar la suscripción se hace desde Google Play; borrar la cuenta de la app no la cancela.</p>
